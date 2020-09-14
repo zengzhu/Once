@@ -35,13 +35,13 @@ let package = Package(
     products: [
         .library(
             name: "COnce",
-            targets: ["OnceC"]),
+            targets: ["COnce"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "OnceC",
+            name: "COnce",
             dependencies: [],
             path: "Sources/OnceC"
         )
