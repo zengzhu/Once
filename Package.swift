@@ -31,17 +31,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "COnce",
+    name: "Once",
     products: [
         .library(
-            name: "COnce",
-            targets: ["COnce"]),
+            name: "Once",
+            targets: ["Once"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "COnce",
+            name: "Once",
             dependencies: [],
             path: "Sources/OnceC"
         )
