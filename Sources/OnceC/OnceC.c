@@ -78,3 +78,7 @@ static void OnceSetupThreadStorageKey(void) {
 static void OnceSaveContextPointer(const void* contextPointer) {
     pthread_setspecific(pthreadSwiftContextKey, contextPointer);
 }
+
+int getOnce() {
+    return 200;
+}

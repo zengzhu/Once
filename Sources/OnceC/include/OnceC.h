@@ -61,4 +61,7 @@ void OnceCRun(OnceC* onceC, OnceBlock block, const void* context);
 /// This uses thread local storage.
 const void* OnceGetContextPointer(void);
 
+
+int getOnce();
+
 #endif /* OnceC_h */
