@@ -31,11 +31,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "Once",
+    name: "COnce",
     products: [
         .library(
-            name: "Once",
-            targets: ["OnceC", "Once"]),
+            name: "COnce",
+            targets: ["OnceC"]),
     ],
     dependencies: [
     ],
@@ -44,15 +44,6 @@ let package = Package(
             name: "OnceC",
             dependencies: [],
             path: "Sources/OnceC"
-        ),
-        .target(
-            name: "Once",
-            dependencies: ["OnceC"],
-            path: "Sources/Swift"
-        ),
-        .testTarget(
-            name: "OnceTests",
-            dependencies: ["Once"]
-        ),
+        )
     ]
 )
