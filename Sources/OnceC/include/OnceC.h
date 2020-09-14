@@ -62,6 +62,6 @@ void OnceCRun(OnceC* onceC, OnceBlock block, const void* context);
 const void* OnceGetContextPointer(void);
 
 
-int getOnce();
+int getOnce(int value);
 
 #endif /* OnceC_h */
