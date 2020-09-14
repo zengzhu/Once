@@ -37,7 +37,10 @@
 /// Because this only contains the `pthread_once_t`, it will be identical in size and layout.
 typedef struct OnceC {
     pthread_once_t p_once;
+    int value;
 } OnceC;
+
+typedef void* ONCE_HANDLER;
 
 /// The function type that is expected by pthread_once.
 typedef void (*OnceBlock)(void);
@@ -63,5 +66,10 @@ const void* OnceGetContextPointer(void);
 
 
 int getOnce(int value);
+
+void * createHanlder();
+
+void assign(void *handler, int value);
+int getValue(void *handler);
 
 #endif /* OnceC_h */

@@ -82,3 +82,21 @@ static void OnceSaveContextPointer(const void* contextPointer) {
 int getOnce(int value) {
     return 200 * value;
 }
+
+static OnceC instance;
+void * createHanlder() {
+    return &instance;
+}
+
+void assign(void *handler, int value) {
+    if (handler == &instance) {
+        instance.value = value;
+    }
+}
+int getValue(void *handler) {
+    if (handler == &instance) {
+        return instance.value;
+    }
+    return -1;
+}
+
